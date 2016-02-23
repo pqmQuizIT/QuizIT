@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>QuizIT - Teste dein IT Wissen!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#jumbo']").on('click', function (event) {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            });
+        })
+    </script>
+    
+</head>
+<body>
+    
+    <div class="eightypercent">
+
+    
+    <!-- Banner ------------------------------------------------------------------------------------->
+    <div class="jumbotron" id="jumbo">
+        <h1 class="mid"><img src="images/logo.png" alt="Logo" width="40%" height="20%"></h1>
+        <br>
+        <h1 class="mid"><button id="btn-start" class="btn-lg btn-blue">Los Geht's</button></h1>
+    </div>
+        
+    <!-- Navigation ------------------------------------------------------------------------------------->
+    <div id="nav_fill" style="z-index: -99; height: 4em;">
+    <nav class="navbar-default" data-spy="affix" data-offset-top="405" style="z-index: 5;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" height="25px" width="100px"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#" >Home</a></li>
+                    <li><a href="QuizIT_highscores.html" >Highscores</a></li>
+                    <li><a href="#" >Fachbereiche</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Mehr <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Impressum</a></li>
+                                <li><a href="#">Kontakt</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="#">Login<span class="glyphicon glyphicon-log-in"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    
+    <!-- Content ------------------------------------------------------------------------------------->
+    <div id="maingrid" class="container text-center nintypercent">
+        <h3 style="margin-top: 2em;">Was ist Quiz<span class="quizblue">IT</span>?</h3>
+        <br>
+        <hr class="soften">
+        <br>
+        <div class="row wide">
+            <div class="col-sm-4 col-sm-push-8"><span class="glyphicon glyphicon-globe" style="font-size: 8em"></div>
+            <div class="col-sm-8 col-sm-pull-4">
+            Kennst du dich gut in der Welt der IT aus?&emsp;-&emsp;Beweise es!<br>
+            QuizIT stellt dir Fragen aus mehreren Fachbereichen der Informationstechnologie.
+            </div>
+        </div>
+        <br>
+        
+        <br>
+        
+        <div class="row wide">
+        <div class="col-sm-4"><span class="glyphicon glyphicon-question-sign" style="font-size: 8em"></span></div>
+            <div class="col-sm-8">
+            Wie wird gezählt?<br>
+            Jede richtig beantwortete Frage addiert 1 Punkt zu deinem Highscore.<br>
+            Sollten zwei Spieler am Ende die selbe Punktezahl erreicht haben<br>
+            wird nach der verbrauchten Zeit gewertet. 
+            </div>
+        </div>
+        <br>
+
+        <br>
+
+        <div class="row wide">
+            <div class="col-sm-4 col-sm-push-8"><span class="glyphicon glyphicon-floppy-save" style="font-size: 8em"></div>
+            <div class="col-sm-8 col-sm-pull-4">
+            Du hast gut abgeschnitten?<br>
+            Melde dich mit Deinem Benutzer an um deinen Highscore zu speichern.<br>
+            Vergleiche dein Ergebnis mit dem von anderen Nutzern!
+            </div>
+        </div>
+        <br>
+        
+        <br>
+        
+        <div class="row wide">
+        <div class="col-sm-4"><span class="glyphicon glyphicon-user" style="font-size: 8em"></span></div>
+            <div class="col-sm-8">
+            Weitere Fragen?<br>
+            Das QuizIT - Team steht Dir gerne zur Verfügung!
+            </div>
+        </div>
+        </div>
+    
+    <!-- Footer ------------------------------------------------------------------------------------->
+        <footer class="text-center">
+            <a class="up-arrow" href="#jumbo" data-toggle="tooltip" title="Nach oben" style="color: #f5f5f5;">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <br>
+            <p style="text-align: right;"><a href="#">Impressum</a>&emsp;&emsp;<a href="#">Kontakt</a></p>
+        </footer>
+            
+    </div> 
+</body>
+
+    
+</html>
